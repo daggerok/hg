@@ -32,6 +32,10 @@ hg push --branch default
 hg push ssh://hg@bitbucket.org/daggerok/hg --branch default
 ----
 
+links:
+
+. link:https://app.pluralsight.com/player?course=meet-mercurial[pluralsight course: meet-mercurial]
+
 == project build
 
 .build run and test
