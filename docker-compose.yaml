@@ -1,0 +1,25 @@
+version: "2.1"
+
+services:
+
+  gradle-akka-kotlin:
+    build:
+      context: .
+      dockerfile: ./docker/gradle/Dockerfile
+    volumes: ["gradle-akka-kotlin-data:/home/app"]
+    networks: [backing-services]
+
+  maven-akka-kotlin:
+    build:
+      context: .
+      dockerfile: ./docker/maven/Dockerfile
+    volumes: ["maven-akka-kotlin-data:/home/app"]
+    networks: [backing-services]
+
+volumes:
+  gradle-akka-kotlin-data: {}
+  maven-akka-kotlin-data: {}
+
+networks:
+  backing-services:
+    driver: bridge

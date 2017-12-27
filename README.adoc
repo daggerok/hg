@@ -1,6 +1,8 @@
-= README
+= link:https://bitbucket.org/daggerok/hg[akka-kotlin]
 
 This repository just about Mercurial learning...
+
+== hg study
 
 .clone
 [source,bash]
@@ -8,7 +10,20 @@ This repository just about Mercurial learning...
 hg clone https://bitbucket.org/daggerok/hg
 ----
 
-== hg study
+== project build
+
+.build run and test
+[source,bash]
+----
+docker-compose down -v; ./mvnw clean package; ./gradlew clean build; docker-compose up --build --force-recreate --remove-orphans
+
+# or
+
+docker-compose down -v;
+./mvnw clean package;
+./gradlew clean build;
+docker-compose up --build --force-recreate --remove-orphans
+----
 
 == Default README.md
 
