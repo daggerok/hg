@@ -23,6 +23,15 @@ editor = vim
 hg clone https://bitbucket.org/daggerok/hg
 ----
 
+.push
+[source,bash]
+----
+hg push
+hg push default
+hg push --branch default
+hg push ssh://hg@bitbucket.org/daggerok/hg --branch default
+----
+
 == project build
 
 .build run and test
