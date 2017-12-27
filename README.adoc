@@ -23,6 +23,14 @@ editor = vim
 hg clone https://bitbucket.org/daggerok/hg
 ----
 
+.or init if new project
+[source,bash]
+----
+mkdir new-project-repo
+cd new-project-repo/
+hg init
+----
+
 .push
 [source,bash]
 ----
