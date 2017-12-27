@@ -4,6 +4,19 @@ This repository just about Mercurial learning...
 
 == hg study
 
+.config
+[source,bash]
+----
+vim ~/.hgrc
+...
+
+[ui]
+username = Maksim Kostromin <daggerok@gmail.com>
+editor = vim
+
+:wq!
+----
+
 .clone
 [source,bash]
 ----
