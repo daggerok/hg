@@ -240,6 +240,16 @@ hg parents
 hg heads
 ----
 
+.merge changes from feature branche into default
+[source,bash]
+----
+hg branch
+# output:
+default
+
+hg merge feature
+----
+
 === ignore
 
 .ignoring files (like subversion, but unlike git) - mercurial is continuing tracking files, so you dont need add them every time
