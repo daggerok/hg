@@ -250,6 +250,18 @@ default
 hg merge feature
 ----
 
+.resolve merge conflicts
+[source,bash]
+----
+hg merge branch-will-conflict
+
+# next you need edit file and seve it
+
+hg resolve -m edited-filename.txt
+
+hg commit -m "Merged branch-will-conflict."
+----
+
 === ignore
 
 .ignoring files (like subversion, but unlike git) - mercurial is continuing tracking files, so you dont need add them every time
