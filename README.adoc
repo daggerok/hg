@@ -4,6 +4,8 @@ This repository just about Mercurial learning...
 
 == hg study
 
+=== config
+
 .config
 [source,bash]
 ----
@@ -22,6 +24,8 @@ editor = vim
 ----
 hg clone https://bitbucket.org/daggerok/hg
 ----
+
+=== common
 
 .or init if new project
 [source,bash]
@@ -51,6 +55,17 @@ hg status
 
 # output:
 # ? app-not-for-commit
+----
+
+.status codes
+----
+M - modified
+A - new
+R - has been removed
+C - clean (not modified sinse last commit)
+! - deleted, but still tracked
+? - not tracked
+I - ignore
 ----
 
 .review history from mercurial logs
@@ -146,6 +161,8 @@ hg forget pom.xml
 rm -rf pom.xml-copy
 ----
 
+=== tag
+
 .tags in mercurial doesn't create any pranch, it's just a nickname of specific revision, so changing to ag is same as changing to specific revision
 [source,bash]
 ----
@@ -169,6 +186,13 @@ date:        Thu Dec 28 16:54:48 2017 +0200
 summary:     Update copy and rename instructions. Add tip instruction.
 ----
 
+=== update
+
+point of `hg update` command:
+
+. update is using to move in history
+. folder `.hg` is real repo, but working directory it's just a snapshot pointing in some time from repo
+
 .update to most recent revision
 [source,bash]
 ----
@@ -177,11 +201,6 @@ hg update tip
 # or same as
 hg update
 ----
-
-point of `hg update` command:
-
-. update is using to move in history
-. folder `.hg` is real repo, but working directory it's just a snapshot pointing in some time from repo
 
 .update very first commit
 [source,bash]
@@ -194,6 +213,28 @@ hg update 0
 ----
 hg update -C 123
 ----
+
+=== branch
+
+.create new brunch and swich to it
+[source,bash]
+----
+hg branch feature
+
+# do some work
+hg commit
+
+# switch back to default branch
+hg update default
+----
+
+.check parent of current revision
+[source,bash]
+----
+hg parents
+----
+
+=== ignore
 
 .ignoring files (like subversion, but unlike git) - mercurial is continuing tracking files, so you dont need add them every time
 [source,bash]
@@ -210,17 +251,6 @@ syntax: glob
 ^.*.iml$
 
 :wq!
-----
-
-.status codes
-----
-M - modified
-A - new
-R - has been removed
-C - clean (not modified sinse last commit)
-! - deleted, but still tracked
-? - not tracked
-I - ignore
 ----
 
 links:
