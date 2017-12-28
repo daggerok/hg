@@ -23,6 +23,8 @@ editor = vim
 [source,bash]
 ----
 hg clone https://bitbucket.org/daggerok/hg
+
+# basically hg clone $URL [ $optionalDestination ]
 ----
 
 === common
