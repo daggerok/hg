@@ -43,6 +43,16 @@ hg commit
 # in opened editor add commit message and close editor to commit
 ----
 
+.check status
+[source,bash]
+----
+touch app-not-for-commit
+hg status
+
+# output:
+# ? app-not-for-commit
+----
+
 .push
 [source,bash]
 ----
