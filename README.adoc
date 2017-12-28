@@ -118,10 +118,10 @@ vim .hgignore
 syntax: glob
 
 *.log
-*.iml
 *.ipr
 *.iws
 .DS_Store
+^.*.iml$
 
 :wq!
 ----
