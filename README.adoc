@@ -228,10 +228,16 @@ hg commit
 hg update default
 ----
 
-.check parent of current revision
+.check parents of current revision
 [source,bash]
 ----
 hg parents
+----
+
+.check heads (changes which has no chldren, like tip revision)
+[source,bash]
+----
+hg heads
 ----
 
 === ignore
