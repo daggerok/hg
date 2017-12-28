@@ -83,7 +83,7 @@ date:        Thu Dec 28 02:02:23 2017 +0200
 summary:     Add status instructions.
 ----
 
-.remove files
+.rm: remove files
 [source,bash]
 ----
 hg remove .DS_Store
@@ -93,7 +93,7 @@ hg status
 R .DS_Store
 ----
 
-.restore accidently removed files from mercurial history
+.revert: restore accidently removed files from mercurial history
 [source,bash]
 ----
 rm -rf build.gradle
@@ -104,7 +104,7 @@ hg revert build.gradle
 hg revert build.gradle -r 10
 ----
 
-.compare pending changes before push
+.outgoing: compare pending changes before push
 [source,bash]
 ----
 hg outpuing
@@ -127,6 +127,20 @@ hg push ssh://hg@bitbucket.org/daggerok/hg --branch default
 
 # force update existing remote history (don't do that!)
 hg push --force
+
+# push paricular repo
+hg update feature
+hg push ssh://hg@bitbucket.org/daggerok/hg --branch feature --new-branch
+----
+
+.incoming: check from external repository what I will receive before pull
+[source,bash]
+----
+hg incoming
+
+hg incoming ssh://hg@bitbucket.org/daggerok/hg
+
+# usage: hg incoming $optionalRepositoryUrl
 ----
 
 .diff
