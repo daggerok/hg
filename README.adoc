@@ -66,6 +66,16 @@ date:        Thu Dec 28 02:02:23 2017 +0200
 summary:     Add status instructions.
 ----
 
+.remove files
+[source,bash]
+----
+hg remove .DS_Store
+hg status
+
+# output:
+R .DS_Store
+----
+
 .push
 [source,bash]
 ----
