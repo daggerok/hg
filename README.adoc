@@ -116,6 +116,17 @@ syntax: glob
 :wq!
 ----
 
+.status codes
+----
+M - modified
+A - new
+R - has been removed
+C - clean (not modified sinse last commit)
+! - deleted, but still tracked
+? - not tracked
+I - ignore
+----
+
 links:
 
 . link:https://app.pluralsight.com/player?course=meet-mercurial[pluralsight course: meet-mercurial]
