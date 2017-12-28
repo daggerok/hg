@@ -53,6 +53,19 @@ hg status
 # ? app-not-for-commit
 ----
 
+.review history from mercurial logs
+[source,bash]
+----
+hg log
+
+# output:
+changeset:   9:9e5ea6921876
+tag:         tip
+user:        Maksim Kostromin <Maksim.Kostromin@jeppesen.com>
+date:        Thu Dec 28 02:02:23 2017 +0200
+summary:     Add status instructions.
+----
+
 .push
 [source,bash]
 ----
