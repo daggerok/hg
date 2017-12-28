@@ -76,6 +76,17 @@ hg status
 R .DS_Store
 ----
 
+.restore accidently removed files from mercurial history
+[source,bash]
+----
+rm -rf build.gradle
+ls
+hg revert build.gradle
+
+# revert specific revision of file
+hg revert build.gradle -r 10
+----
+
 .push
 [source,bash]
 ----
