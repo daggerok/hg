@@ -3,8 +3,17 @@
 build/
 out/
 target/
+
 .DS_Store$
 .iml$
 .ipr$
 .iws$
 .log$
+
+syntax: glob
+
+*.log
+*.iml
+*.ipr
+*.iws
+.DS_Store

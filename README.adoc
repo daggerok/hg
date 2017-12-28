@@ -99,6 +99,23 @@ hg push ssh://hg@bitbucket.org/daggerok/hg --branch default
 hg push --force
 ----
 
+.ignoring files (like subversion, but unlike git) - mercurial is continuing tracking files, so you dont need add them every time
+[source,bash]
+----
+vim .hgignore
+...
+
+syntax: glob
+
+*.log
+*.iml
+*.ipr
+*.iws
+.DS_Store
+
+:wq!
+----
+
 links:
 
 . link:https://app.pluralsight.com/player?course=meet-mercurial[pluralsight course: meet-mercurial]
