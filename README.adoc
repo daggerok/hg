@@ -216,6 +216,8 @@ hg update -C 123
 
 === branch
 
+in mercurial all branches doing to be a part of repository
+
 .create new brunch and swich to it
 [source,bash]
 ----
@@ -261,6 +263,10 @@ hg resolve -m edited-filename.txt
 
 hg commit -m "Merged branch-will-conflict."
 ----
+
+=== share repos
+
+todo...
 
 === ignore
 
