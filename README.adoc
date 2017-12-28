@@ -116,20 +116,32 @@ hg diff -r 15
 hg copy pom.xml pom.xml-copy
 
 hg status
-# output:
-A pom.xml-copy
+# A pom.xml-copy
 
 # natively remove if file wasn't added
 rm -rf pom.xml-copy
 
 hg status
-# output:
-! pom.xml-copy
+# ! pom.xml-copy
 
 # and finally forget this shit
 hg forget pom.xml-copy
 ----
 
+.rename hg rename == hg copy + hg remove
+[source,bash]
+----
+# mercutial traks copies in different way during merge it will correctly propagate
+hg rename pom.xml pom.xml-copy
+
+hg status
+# A pom.xml-copy
+# R pom.xml
+
+hg revert pom.xml
+hg forget pom.xml
+rm -rf pom.xml-copy
+----
 
 .ignoring files (like subversion, but unlike git) - mercurial is continuing tracking files, so you dont need add them every time
 [source,bash]
