@@ -175,6 +175,12 @@ summary:     Update copy and rename instructions. Add tip instruction.
 hg update tip
 ----
 
+.update very first commit
+[source,bash]
+----
+hg update 0
+----
+
 .ignoring files (like subversion, but unlike git) - mercurial is continuing tracking files, so you dont need add them every time
 [source,bash]
 ----
