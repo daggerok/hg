@@ -175,10 +175,21 @@ summary:     Update copy and rename instructions. Add tip instruction.
 hg update tip
 ----
 
+point of `hg update` command:
+
+. update is using to move in history
+. folder `.hg` is real repo, but working directory it's just a snapshot pointing in some time from repo
+
 .update very first commit
 [source,bash]
 ----
 hg update 0
+----
+
+.update and discard untracked files / changes forcevly replace state of working directory from revision. if requested revision is from different branch, then requested revision branch will be switched to requested one. if -C not provided, merge will be applied
+[source,bash]
+----
+hg update -C 123
 ----
 
 .ignoring files (like subversion, but unlike git) - mercurial is continuing tracking files, so you dont need add them every time
