@@ -173,6 +173,9 @@ summary:     Update copy and rename instructions. Add tip instruction.
 [source,bash]
 ----
 hg update tip
+
+# or same as
+hg update
 ----
 
 point of `hg update` command:
