@@ -31,6 +31,18 @@ cd new-project-repo/
 hg init
 ----
 
+.add some files and commit them
+[source,bash]
+----
+touch my-app my-other-app
+hg add .
+hg commit -m "Add my-app and my-other-app."
+
+# or you can just use command:
+hg commit
+# in opened editor add commit message and close editor to commit
+----
+
 .push
 [source,bash]
 ----
