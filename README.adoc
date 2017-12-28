@@ -94,6 +94,9 @@ hg push
 hg push default
 hg push --branch default
 hg push ssh://hg@bitbucket.org/daggerok/hg --branch default
+
+# force update existing remote history (don't do that!)
+hg push --force
 ----
 
 links:
