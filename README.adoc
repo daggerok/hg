@@ -99,6 +99,16 @@ hg push ssh://hg@bitbucket.org/daggerok/hg --branch default
 hg push --force
 ----
 
+.diff
+[source,bash]
+----
+# sinse beginning of the history:
+hg diff -r 0
+
+# if previouse rev is 15, the show just latest changes using:
+hg diff -r 15
+----
+
 .ignoring files (like subversion, but unlike git) - mercurial is continuing tracking files, so you dont need add them every time
 [source,bash]
 ----
